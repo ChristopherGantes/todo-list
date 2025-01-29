@@ -1,0 +1,61 @@
+:root {
+  --todo-padding: 5px;
+}
+
+.todos-container {
+  display: grid;
+  padding: var(--todo-padding);
+  gap: 10px;
+
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 300px;
+}
+
+.todo-div {
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+
+
+  box-shadow: 4px 4px 2px 0px lightgrey;
+  border: 1px solid gray;
+  border-bottom: 10px solid rgba(28, 28, 198, 0.752);
+  border-radius: 10px;
+}
+
+.todo-title {
+  grid-column: 1/3;
+  grid-row: 1/2;
+
+
+  font-weight: 700;
+  padding: var(--note-padding);
+}
+
+.todo-description {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  justify-self: start;
+
+  padding: var(--note-padding);
+  overflow-y: auto;
+}
+
+.todo-due-date {
+  grid-column: 1/2;
+  grid-row: 3/4;
+
+  font-style: italic;
+  padding: var(--note-padding);
+  align-self: center;
+}
+
+.todo-priority {
+  grid-column: 2/3;
+  grid-row: 3/4;
+
+  font-weight: 900;
+  padding: var(--note-padding);
+  align-self: center;
+}

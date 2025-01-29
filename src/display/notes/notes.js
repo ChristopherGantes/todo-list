@@ -1,4 +1,4 @@
-import "./note.css";
+import "./notes.css";
 
 function createNoteDiv(title, description, index) {
   const noteDiv = document.createElement("div");
