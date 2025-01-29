@@ -1,0 +1,32 @@
+:root {
+  --post-it-yellow-top: rgb(254, 216, 0);
+  --post-it-yellow-bottom: rgb(249, 227, 101);
+  --max-length: 200px;
+  --note-padding: 5px;
+}
+
+.notes-container {
+  display: flex;
+  gap: 10px;
+}
+
+.note-div {
+  background-color: var(--post-it-yellow-top);
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+
+  max-width: var(--max-length);
+  height: var(--max-length);
+}
+
+.note-title {
+  text-align: center;
+  padding: var(--note-padding);
+}
+
+.note-description {
+  background-color: var(--post-it-yellow-bottom);
+  padding: var(--note-padding);
+
+  overflow-y: auto;
+}
