@@ -3,6 +3,7 @@ import "./main.css";
 import Project from "./components/project";
 import displayNotes from "./display/notes/notes";
 import displayTodos from "./display/todos/todos";
+import displayChecklist from "./display/checklist/checklist";
 
 const body = document.querySelector("body");
 
@@ -31,8 +32,17 @@ project.handleTodo(
   "HIGH"
 );
 
+project.handleChecklist("finish checklist 0", true);
+project.handleChecklist("finish checklist 1", false);
+project.handleChecklist("finish checklist 2", false);
+project.handleChecklist("finish checklist 3", true);
+project.handleChecklist("finish checklist 4", true);
+project.handleChecklist("finish checklist 5", false);
+
 
 console.log(project.getNotes());
 
 body.appendChild(displayTodos(project.getTodos()));
 body.appendChild(displayNotes(project.getNotes()));
+body.appendChild(displayChecklist(project.getChecklist()));
+

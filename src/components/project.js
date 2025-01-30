@@ -1,13 +1,16 @@
 import Todos from "./todos";
 import Notes from "./notes";
+import Checklist from "./checklist";
 
 class Project {
   #todos;
   #notes;
+  #checklist;
 
   constructor() {
     this.#todos = new Todos();
     this.#notes = new Notes();
+    this.#checklist = new Checklist();
   }
 
   handleTodo(title, description, dueDate, priority) {
@@ -33,8 +36,19 @@ class Project {
   getNotes() {
     return this.#notes.getNotes();
   }
-  removeNotes(index) {
+  removeNote(index) {
     this.#notes.removeNotes(index);
+  }
+
+  handleChecklist(description, checked) {
+    const tempCheckItem = this.#checklist.createCheckItem(description, checked);
+    this.#checklist.addCheckItem(tempCheckItem);
+  }
+  getChecklist() {
+    return this.#checklist.getChecklist();
+  }
+  removeCheckItem(index) {
+    this.#checklist.removeCheckItem(index);
   }
 }
 

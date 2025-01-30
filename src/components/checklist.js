@@ -22,4 +22,4 @@ class Checklist {
   }
 }
 
-export default Notes;
+export default Checklist;

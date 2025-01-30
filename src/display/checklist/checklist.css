@@ -1,0 +1,39 @@
+:root {
+  --checklist-padding: 2px 10px;
+  --checklist-even-color: #a2d2ff;
+  --checklist-odd-color: #bde0fe;
+  --checklist-text-color: #1b263b;
+}
+
+.checklist-container {
+  display: grid;
+  padding: var(--checklist-padding);
+}
+
+.check-item-div {
+  display: grid;
+  grid-template-columns: 200px 20px;
+  padding: var(--checklist-padding);
+  align-items: center;
+  max-width: fit-content;
+}
+
+.check-item-div:nth-child(even) {
+  background-color: var(--checklist-even-color);
+}
+
+.check-item-div:nth-child(odd) {
+  background-color: var(--checklist-odd-color);
+}
+
+.check-item-description {
+  color: var(--checklist-text-color);
+  font-style: italic;
+}
+
+input.check-item-checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
