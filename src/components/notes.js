@@ -1,3 +1,10 @@
+class Note {
+  constructor(title, description) {
+    this.title = title;
+    this.description = description;
+  }
+}
+
 class Notes {
   #notes;
 
@@ -6,7 +13,7 @@ class Notes {
   }
 
   createNote(title, description) {
-    return { title, description };
+    return new Note(title, description);
   }
 
   addNote(note) {
@@ -22,4 +29,4 @@ class Notes {
   }
 }
 
-export default Notes;
+export {Note, Notes};

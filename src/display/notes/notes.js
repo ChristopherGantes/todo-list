@@ -26,16 +26,17 @@ function createNotesContainer() {
   return notesContainer;
 }
 
-function appendNotesContainer(notesContainer, notes) {
+function appendNotesContainer(notesContainer, notesObj) {
+  const notes = notesObj.getNotes();
   notes.forEach((note, index) => {
     const noteDiv = createNoteDiv(note.title, note.description, index);
     notesContainer.appendChild(noteDiv);
   });
 }
 
-function displayNotes(notes) {
+function displayNotes(notesObj) {
   const notesContainer = createNotesContainer();
-  appendNotesContainer(notesContainer, notes);
+  appendNotesContainer(notesContainer, notesObj);
 
   return notesContainer;
 }

@@ -36,16 +36,23 @@ function createTodosContainer() {
   return todosContainer;
 }
 
-function appendTodosContainer(todosContainer, todos) {
+function appendTodosContainer(todosContainer, todosObj) {
+  const todos = todosObj.getTodos();
   todos.forEach((todo, index) => {
-    const todoDiv = createTodoDiv(todo.title, todo.description, todo.dueDate, todo.priority, index);
+    const todoDiv = createTodoDiv(
+      todo.title,
+      todo.description,
+      todo.dueDate,
+      todo.priority,
+      index
+    );
     todosContainer.appendChild(todoDiv);
   });
 }
 
-function displayTodos(todos) {
+function displayTodos(todosObj) {
   const todosContainer = createTodosContainer();
-  appendTodosContainer(todosContainer, todos);
+  appendTodosContainer(todosContainer, todosObj);
 
   return todosContainer;
 }

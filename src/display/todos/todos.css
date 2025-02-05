@@ -17,11 +17,9 @@
   grid-template-columns: 1fr 1fr;
   justify-items: center;
 
-
-  box-shadow: 4px 4px 2px 0px lightgrey;
-  border: 1px solid gray;
-  border-bottom: 10px solid rgba(28, 28, 198, 0.752);
-  border-radius: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0px 0px black;
 }
 
 .todo-title {

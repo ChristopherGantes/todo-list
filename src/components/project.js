@@ -1,6 +1,6 @@
-import Todos from "./todos";
-import Notes from "./notes";
-import Checklist from "./checklist";
+import { Todos } from "./todos";
+import { Notes } from "./notes";
+import { Checklist } from "./checklist";
 
 class Project {
   #todos;
@@ -13,42 +13,16 @@ class Project {
     this.#checklist = new Checklist();
   }
 
-  handleTodo(title, description, dueDate, priority) {
-    const tempTodo = this.#todos.createTodo(
-      title,
-      description,
-      dueDate,
-      priority
-    );
-    this.#todos.addTodo(tempTodo);
-  }
   getTodos() {
-    return this.#todos.getTodos();
-  }
-  removeTodo(index) {
-    this.#todos.removeTodo(index);
+    return this.#todos;
   }
 
-  handleNote(title, description) {
-    const tempNote = this.#notes.createNote(title, description);
-    this.#notes.addNote(tempNote);
-  }
   getNotes() {
-    return this.#notes.getNotes();
-  }
-  removeNote(index) {
-    this.#notes.removeNotes(index);
+    return this.#notes;
   }
 
-  handleChecklist(description, checked) {
-    const tempCheckItem = this.#checklist.createCheckItem(description, checked);
-    this.#checklist.addCheckItem(tempCheckItem);
-  }
   getChecklist() {
-    return this.#checklist.getChecklist();
-  }
-  removeCheckItem(index) {
-    this.#checklist.removeCheckItem(index);
+    return this.#checklist;
   }
 }
 

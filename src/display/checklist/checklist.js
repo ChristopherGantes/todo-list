@@ -7,7 +7,7 @@ function createCheckItemDiv(description, checked, index) {
 
   const checkItemDescription = document.createElement("label");
   checkItemDescription.setAttribute("class", "check-item-description");
-  checkItemDescription.setAttribute("for",`${index}-item`)
+  checkItemDescription.setAttribute("for", `${index}-item`);
   checkItemDiv.appendChild(checkItemDescription);
 
   const checkItemCheckbox = document.createElement("input");
@@ -29,13 +29,15 @@ function createChecklistContainer() {
   return checklistContainer;
 }
 
-function appendChecklistContainer(checklistContainer, checklist) {
+function appendChecklistContainer(checklistContainer, checklistObj) {
+  const checklist = checklistObj.getChecklist();
   checklist.forEach((checkItem, index) => {
     const checkItemDiv = createCheckItemDiv(
       checkItem.description,
       checkItem.checked,
       index
     );
+
     checklistContainer.appendChild(checkItemDiv);
   });
 }

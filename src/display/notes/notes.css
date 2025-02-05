@@ -21,7 +21,9 @@
   width: var(--max-length);
   height: var(--max-length);
 
-  box-shadow: 4px 4px 2px 0px lightgrey;
+  border: 2px solid black;
+  border-radius: 2px;
+  box-shadow: 5px 5px 0px 0px black;
 }
 
 .note-title {

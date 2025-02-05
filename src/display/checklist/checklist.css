@@ -16,6 +16,10 @@
   padding: var(--checklist-padding);
   align-items: center;
   max-width: fit-content;
+
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: 5px 5px 0px 0px black;
 }
 
 .check-item-div:nth-child(even) {

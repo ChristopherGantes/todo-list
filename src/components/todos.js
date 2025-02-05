@@ -1,3 +1,12 @@
+class Todo {
+  constructor(title, description, dueDate, priority) {
+    this.title = title;
+    this.description = description;
+    this.dueDate = dueDate;
+    this.priority = priority;
+  }
+}
+
 class Todos {
   #todos;
 
@@ -6,7 +15,7 @@ class Todos {
   }
 
   createTodo(title, description, dueDate, priority) {
-    return { title, description, dueDate, priority };
+    return new Todo(title, description, dueDate, priority);
   }
 
   addTodo(todo) {
@@ -22,4 +31,4 @@ class Todos {
   }
 }
 
-export default Todos;
+export {Todo, Todos};
