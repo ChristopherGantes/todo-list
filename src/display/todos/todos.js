@@ -1,5 +1,4 @@
 import "./todos.css";
-
 function createTodoDiv(title, description, dueDate, priority, index) {
   const todoDiv = document.createElement("div");
   todoDiv.setAttribute("class", "todo-div");
@@ -20,6 +19,11 @@ function createTodoDiv(title, description, dueDate, priority, index) {
   const todoPriority = document.createElement("p");
   todoPriority.setAttribute("class", "todo-priority");
   todoDiv.appendChild(todoPriority);
+
+  const todoEdit = document.createElement("button");
+  todoEdit.setAttribute("type","button");
+  todoEdit.setAttribute("class", "todo-edit");
+  todoDiv.appendChild(todoEdit);
 
   todoTitle.textContent = title;
   todoDescription.textContent = description;

@@ -13,6 +13,11 @@ function createNoteDiv(title, description, index) {
   noteDescription.setAttribute("class", "note-description");
   noteDiv.appendChild(noteDescription);
 
+  const noteEdit = document.createElement("button");
+  noteEdit.setAttribute("type","button");
+  noteEdit.setAttribute("class", "note-edit");
+  noteDiv.appendChild(noteEdit);
+
   noteTitle.textContent = title;
   noteDescription.textContent = description;
 

@@ -1,7 +1,7 @@
 import "./checklist.css";
 
 function createCheckItemDiv(description, checked, index) {
-  const checkItemDiv = document.createElement("div");
+  const checkItemDiv = document.createElement("li");
   checkItemDiv.setAttribute("class", "check-item-div");
   checkItemDiv.setAttribute("id", index);
 
@@ -16,6 +16,11 @@ function createCheckItemDiv(description, checked, index) {
   checkItemCheckbox.setAttribute("id", `${index}-item`);
   checkItemDiv.appendChild(checkItemCheckbox);
 
+  const checkItemEdit = document.createElement("button");
+  checkItemEdit.setAttribute("type", "button");
+  checkItemEdit.setAttribute("class", "check-item-edit");
+  checkItemDiv.appendChild(checkItemEdit);
+
   checkItemDescription.textContent = description;
   checkItemCheckbox.checked = checked;
 
@@ -23,7 +28,7 @@ function createCheckItemDiv(description, checked, index) {
 }
 
 function createChecklistContainer() {
-  const checklistContainer = document.createElement("div");
+  const checklistContainer = document.createElement("ul");
   checklistContainer.setAttribute("class", "checklist-container");
 
   return checklistContainer;

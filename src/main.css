@@ -1,3 +1,4 @@
+/* CSS RESET */
 *,
 *::before,
 *::after {
@@ -29,3 +30,26 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
   hyphens: auto;
 }
+
+body {
+  height: 100vh;
+  background-color: lightgrey;
+}
+
+/* PROJECT CSS*/
+div.page-grid {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-auto-flow: 1fr 4fr;
+
+}
+
+header {
+  height: 100px;
+}
+main {
+  grid-row: 2/3;
+  grid-column: 2/3;
+
+}
+

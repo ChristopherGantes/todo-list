@@ -9,11 +9,12 @@
   display: flex;
   padding: var(--note-padding);
   gap: 10px;
-
+  
   overflow-x: auto;
 }
 
 .note-div {
+  position: relative;
   background-color: var(--post-it-yellow-top);
   display: grid;
   grid-template-rows: 1fr 4fr;
@@ -34,7 +35,21 @@
 
 .note-description {
   background-color: var(--post-it-yellow-bottom);
-  padding: var(--note-padding);
+  padding: calc(var(--note-padding) * 2);
 
   overflow-y: auto;
+}
+
+button.note-edit {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid lightslategray;
+  border-radius: 50%;
+}
+
+button.note-edit:hover {
+  background-color: black;
 }
